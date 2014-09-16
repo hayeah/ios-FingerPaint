@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		89EE1F7819C692690014E8A4 /* SpecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EE1F7719C692690014E8A4 /* SpecTests.swift */; };
-		89EE1F7919C6B9E20014E8A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB90F119C67F170048E245 /* ViewController.swift */; };
+		89EE1F7D19C71C150014E8A4 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EE1F7C19C71C150014E8A4 /* CanvasView.swift */; };
+		89EE1F7E19C71C2F0014E8A4 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EE1F7C19C71C150014E8A4 /* CanvasView.swift */; };
+		89EE1F7F19C71CBA0014E8A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89FB90F319C67F170048E245 /* Main.storyboard */; };
+		89EE1F8019C71CC50014E8A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB90EF19C67F170048E245 /* AppDelegate.swift */; };
+		89EE1F8119C7E4070014E8A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB90F119C67F170048E245 /* ViewController.swift */; };
 		89FB90F019C67F170048E245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB90EF19C67F170048E245 /* AppDelegate.swift */; };
 		89FB90F219C67F170048E245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB90F119C67F170048E245 /* ViewController.swift */; };
 		89FB90F519C67F170048E245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89FB90F319C67F170048E245 /* Main.storyboard */; };
 		89FB90F719C67F170048E245 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89FB90F619C67F170048E245 /* Images.xcassets */; };
-		89FB910319C67F170048E245 /* FingerPaintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB910219C67F170048E245 /* FingerPaintTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		89EE1F7719C692690014E8A4 /* SpecTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecTests.swift; sourceTree = "<group>"; };
+		89EE1F7C19C71C150014E8A4 /* CanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		89FB90EA19C67F170048E245 /* FingerPaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FingerPaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FB90EE19C67F170048E245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89FB90EF19C67F170048E245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +40,6 @@
 		89FB90F619C67F170048E245 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		89FB90FC19C67F170048E245 /* FingerPaintTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FingerPaintTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FB910119C67F170048E245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		89FB910219C67F170048E245 /* FingerPaintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerPaintTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,7 @@
 				89FB90F319C67F170048E245 /* Main.storyboard */,
 				89FB90F619C67F170048E245 /* Images.xcassets */,
 				89FB90ED19C67F170048E245 /* Supporting Files */,
+				89EE1F7C19C71C150014E8A4 /* CanvasView.swift */,
 			);
 			path = FingerPaint;
 			sourceTree = "<group>";
@@ -107,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				89EE1F7619C692690014E8A4 /* spec */,
-				89FB910219C67F170048E245 /* FingerPaintTests.swift */,
 				89FB910019C67F170048E245 /* Supporting Files */,
 			);
 			path = FingerPaintTests;
@@ -210,6 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89EE1F7F19C71CBA0014E8A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +226,7 @@
 			files = (
 				89FB90F219C67F170048E245 /* ViewController.swift in Sources */,
 				89FB90F019C67F170048E245 /* AppDelegate.swift in Sources */,
+				89EE1F7D19C71C150014E8A4 /* CanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,9 +234,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89EE1F7919C6B9E20014E8A4 /* ViewController.swift in Sources */,
+				89EE1F8119C7E4070014E8A4 /* ViewController.swift in Sources */,
 				89EE1F7819C692690014E8A4 /* SpecTests.swift in Sources */,
-				89FB910319C67F170048E245 /* FingerPaintTests.swift in Sources */,
+				89EE1F7E19C71C2F0014E8A4 /* CanvasView.swift in Sources */,
+				89EE1F8019C71CC50014E8A4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

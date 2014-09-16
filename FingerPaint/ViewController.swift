@@ -9,10 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+
+    weak var canvasView : CanvasView!
                             
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Error: will release the CanvasView immediately after assignment
+        // self.canvasView = CanvasView(frame: self.view.bounds)
+        let canvasView = CanvasView(frame: self.view.bounds)
+        self.canvasView = canvasView
+        self.canvasView.backgroundColor = UIColor.whiteColor()
+        self.view.addSubview(self.canvasView)
     }
 
     override func didReceiveMemoryWarning() {
