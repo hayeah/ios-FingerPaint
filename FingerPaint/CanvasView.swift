@@ -13,6 +13,12 @@ class CanvasView: UIView {
                   (100,150),(150,150),
                             (150,200)]
 
+    var currentColor: UIColor = UIColor.blackColor() {
+        didSet {
+            self.setNeedsDisplay()
+        }
+    }
+
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect)
@@ -27,10 +33,11 @@ class CanvasView: UIView {
             CGContextAddLineToPoint(context, CGFloat(x2), CGFloat(y2))
         }
 
-        CGContextSetStrokeColorWithColor(context,UIColor.redColor().CGColor)
+        CGContextSetLineWidth(context, 2)
+        CGContextSetStrokeColorWithColor(context,currentColor.CGColor)
         CGContextStrokePath(context)
 
-        // CGContextClearRect(context, <#rect: CGRect#>)
+        // CGContextClearRect(context, rect)
     }
 
 }

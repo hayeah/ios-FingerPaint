@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     weak var canvasView : CanvasView!
+    weak var selectedColorPicker: UIButton?
                             
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +40,25 @@ class ViewController: UIViewController {
             let (w,h) = size
             let rect = CGRect(x: x, y: y, width: w, height: h)
             let button = UIButton(frame: rect)
-            // button.buttonType = UIButtonType.System
             button.backgroundColor = color
             self.view.addSubview(button)
+
+            button.addTarget(self, action: "colorPickerTapped:", forControlEvents: UIControlEvents.TouchUpInside)
         }
+    }
+
+    func colorPickerTapped(button: UIButton) {
+        // println("tapped: \(button.backgroundColor)")
+        if let picker = self.selectedColorPicker {
+            picker.layer.shadowRadius = 0
+        }
+        self.selectedColorPicker = button
+        button.layer.shadowColor = UIColor(white: 0.4, alpha: 1).CGColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 0)
+        button.layer.shadowRadius = 3
+        button.layer.shadowOpacity = 1
+
+        self.canvasView.currentColor = button.backgroundColor!
     }
 
     override func didReceiveMemoryWarning() {
