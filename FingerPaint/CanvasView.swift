@@ -9,9 +9,10 @@
 import UIKit
 
 class CanvasView: UIView {
-    let zigzag = [(100,100),
-                  (100,150),(150,150),
-                            (150,200)]
+
+
+    var paths: [Path] = []
+    private var currentPath: Path?
 
     var currentColor: UIColor = UIColor.blackColor() {
         didSet {
@@ -19,25 +20,48 @@ class CanvasView: UIView {
         }
     }
 
+    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
+        self.currentPath = Path(color: currentColor)
+        paths.append(currentPath!)
+        addToPath(touches)
+    }
+
+    override func touchesMoved(touches: NSSet!, withEvent event: UIEvent!)  {
+        // println("move: \(pt1)")
+        addToPath(touches)
+        self.setNeedsDisplay()
+    }
+
+    override func touchesEnded(touches: NSSet!, withEvent event: UIEvent!) {
+        addToPath(touches)
+        self.currentPath = nil
+    }
+
+    private func addToPath(touches: NSSet) {
+        let t = touches.anyObject() as UITouch
+        let point = t.locationInView(self)
+        self.currentPath!.add(point)
+    }
+
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect)
     {
         let context = UIGraphicsGetCurrentContext()
-
         CGContextBeginPath(context)
-        for i in 0..<zigzag.count-1 {
-            let (x1,y1) = zigzag[i]
-            let (x2,y2) = zigzag[i+1]
-            CGContextMoveToPoint(context, CGFloat(x1), CGFloat(y1))
-            CGContextAddLineToPoint(context, CGFloat(x2), CGFloat(y2))
+
+        for path in paths {
+            let points = path.points
+            for i in 0..<points.count-1 {
+                let p1 = points[i]
+                let p2 = points[i+1]
+                CGContextMoveToPoint(context, p1.x, p1.y)
+                CGContextAddLineToPoint(context, p2.x, p2.y)
+            }
+            CGContextSetLineWidth(context, 2)
+            CGContextSetStrokeColorWithColor(context,path.color.CGColor)
+            CGContextStrokePath(context)
         }
-
-        CGContextSetLineWidth(context, 2)
-        CGContextSetStrokeColorWithColor(context,currentColor.CGColor)
-        CGContextStrokePath(context)
-
-        // CGContextClearRect(context, rect)
     }
 
 }
