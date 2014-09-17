@@ -43,6 +43,11 @@ class CanvasView: UIView {
         self.currentPath!.add(point)
     }
 
+    func clear() {
+        self.paths = []
+        self.setNeedsDisplay()
+    }
+
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect)

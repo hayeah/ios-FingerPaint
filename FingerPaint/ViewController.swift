@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     weak var canvasView : CanvasView!
     weak var selectedColorPicker: UIButton?
+    weak var clearButton: UIButton!
                             
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class ViewController: UIViewController {
         self.view.addSubview(self.canvasView)
 
         setupColorPickers()
+        setupClearButton()
     }
 
     func setupColorPickers() {
@@ -45,6 +47,20 @@ class ViewController: UIViewController {
 
             button.addTarget(self, action: "colorPickerTapped:", forControlEvents: UIControlEvents.TouchUpInside)
         }
+    }
+
+    func setupClearButton() {
+        let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        self.clearButton = button
+        button.frame = CGRect(x: 267, y: 518, width: 37, height: 30)
+        button.setTitle("Clear", forState: UIControlState.Normal)
+        self.view.addSubview(button)
+
+        button.addTarget(self, action: "clearButtonTapped:", forControlEvents: UIControlEvents.TouchUpInside)
+    }
+
+    func clearButtonTapped(button: UIButton) {
+        self.canvasView.clear()
     }
 
     func colorPickerTapped(button: UIButton) {
