@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8957928419C935D200C5FA78 /* UIColor+IntegerLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8957928319C935D200C5FA78 /* UIColor+IntegerLiteral.swift */; };
+		8957928519C9360300C5FA78 /* UIColor+IntegerLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8957928319C935D200C5FA78 /* UIColor+IntegerLiteral.swift */; };
 		89EE1F7819C692690014E8A4 /* SpecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EE1F7719C692690014E8A4 /* SpecTests.swift */; };
 		89EE1F7D19C71C150014E8A4 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EE1F7C19C71C150014E8A4 /* CanvasView.swift */; };
 		89EE1F7E19C71C2F0014E8A4 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EE1F7C19C71C150014E8A4 /* CanvasView.swift */; };
@@ -30,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8957928319C935D200C5FA78 /* UIColor+IntegerLiteral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+IntegerLiteral.swift"; path = "../UIColor+IntegerLiteral.swift"; sourceTree = "<group>"; };
 		89EE1F7719C692690014E8A4 /* SpecTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecTests.swift; sourceTree = "<group>"; };
 		89EE1F7C19C71C150014E8A4 /* CanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		89FB90EA19C67F170048E245 /* FingerPaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FingerPaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +98,7 @@
 				89FB90F619C67F170048E245 /* Images.xcassets */,
 				89FB90ED19C67F170048E245 /* Supporting Files */,
 				89EE1F7C19C71C150014E8A4 /* CanvasView.swift */,
+				8957928319C935D200C5FA78 /* UIColor+IntegerLiteral.swift */,
 			);
 			path = FingerPaint;
 			sourceTree = "<group>";
@@ -226,6 +230,7 @@
 			files = (
 				89FB90F219C67F170048E245 /* ViewController.swift in Sources */,
 				89FB90F019C67F170048E245 /* AppDelegate.swift in Sources */,
+				8957928419C935D200C5FA78 /* UIColor+IntegerLiteral.swift in Sources */,
 				89EE1F7D19C71C150014E8A4 /* CanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +243,7 @@
 				89EE1F7819C692690014E8A4 /* SpecTests.swift in Sources */,
 				89EE1F7E19C71C2F0014E8A4 /* CanvasView.swift in Sources */,
 				89EE1F8019C71CC50014E8A4 /* AppDelegate.swift in Sources */,
+				8957928519C9360300C5FA78 /* UIColor+IntegerLiteral.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
