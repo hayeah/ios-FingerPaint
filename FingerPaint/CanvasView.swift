@@ -20,19 +20,19 @@ class CanvasView: UIView {
         }
     }
 
-    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         self.currentPath = Path(color: currentColor)
         paths.append(currentPath!)
         addToPath(touches)
     }
 
-    override func touchesMoved(touches: NSSet!, withEvent event: UIEvent!)  {
+    override func touchesMoved(touches: NSSet, withEvent event: UIEvent)  {
         // println("move: \(pt1)")
         addToPath(touches)
         self.setNeedsDisplay()
     }
 
-    override func touchesEnded(touches: NSSet!, withEvent event: UIEvent!) {
+    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
         addToPath(touches)
         self.currentPath = nil
     }
