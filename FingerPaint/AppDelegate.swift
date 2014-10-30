@@ -16,6 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
+        // Create a window that's the same size as the screen.
+        let window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window = window
+
+        // Load the story board from the main bundle.
+//        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+//
+//        // Get the initial controller, and assign it to be the root controller.
+//        let controller = storyboard.instantiateInitialViewController() as UIViewController
+        let c = ViewController()
+        self.window!.rootViewController = c
+        println("ctrl root view: \(c.view)")
+        
+        // Show the window
+        self.window!.makeKeyAndVisible()
         return true
     }
 
